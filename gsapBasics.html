@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gsapBasics</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat";
+        color: #fff;
+      }
+
+      .ball {
+        margin: 2rem;
+        background: purple;
+        width: 5rem;
+        height: 5rem;
+        display: grid;
+        place-content: center;
+        border-radius: 1rem;
+      }
+
+      button {
+        margin: 1rem;
+        border: 0;
+        outline: none;
+        padding: 1rem 2rem;
+
+        background: purple;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: rgb(144, 0, 144);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball ball1">m</div>
+    <div class="ball ball2">a</div>
+    <div class="ball ball3">n</div>
+    <div class="ball ball4">i</div>
+    <div class="ball ball5">i</div>
+    <div class="ball ball6">i</div>
+    <div class="ball ball7">i</div>
+    <div class="ball ball8">i</div>
+    <button><a href="index.html">home</a></button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script>
+      gsap.to(".ball", {
+        // stagger: 1,
+        stagger: { amount: 0.2, from: "center" },
+        rotation: 720,
+        duration: 2,
+        x: 500,
+        repeat: 1,
+        yoyo: true,
+        ease: "bounce.inOut",
+        // ease: "elastic",
+      });
+    </script>
+  </body>
+</html>
