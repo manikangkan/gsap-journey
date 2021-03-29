@@ -87,4 +87,9 @@ body {
   text-align: center;
   font-size: 0.5rem;
 }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
 /*# sourceMappingURL=main.css.map */
