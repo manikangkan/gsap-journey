@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gsap2</title>
+    <style>
+      * {
+        font-size: 1rem;
+        color: #fff;
+        font-family: "Montserrat";
+      }
+
+      body {
+        overflow: hidden;
+      }
+      .ball {
+        margin: 1rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 1rem;
+        background: purple;
+        display: grid;
+        place-content: center;
+      }
+
+      button {
+        margin: 1rem;
+        border: 0;
+        outline: none;
+        padding: 1rem 2rem;
+
+        background: purple;
+        border-radius: 1rem;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: rgb(144, 0, 144);
+      }
+
+      button:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"><p>subject</p></div>
+    <button class="to">to</button>
+    <button class="from">from</button>
+    <button class="fromTo">fromTo</button>
+    <button class="reset">reset</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script>
+      const to = document.querySelector(".to");
+      to.addEventListener("click", () => {
+        gsap.to(".ball", {
+          duration: 5,
+          rotation: 720,
+          x: 800,
+        });
+      });
+
+      const from = document.querySelector(".from");
+      from.addEventListener("click", () => {
+        gsap.from(".ball", {
+          duration: 5,
+          rotation: 720,
+          x: 800,
+        });
+      });
+
+      const fromTo = document.querySelector(".fromTo");
+      fromTo.addEventListener("click", () => {
+        gsap.fromTo(
+          ".ball",
+          {
+            x: 800,
+          },
+          {
+            x: 200,
+            duration: 5,
+            rotation: -720,
+          }
+        );
+      });
+
+      const reset = document.querySelector(".reset");
+      reset.addEventListener("click", () => location.reload(true));
+    </script>
+  </body>
+</html>

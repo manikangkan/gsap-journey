@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gsap1</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .ball {
+        margin: 2rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 1rem;
+      }
+
+      .ball1 {
+        background: purple;
+      }
+      .ball2 {
+        background: orangered;
+      }
+      .ball3 {
+        background: olivedrab;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball1 ball"></div>
+    <div class="ball2 ball"></div>
+    <div class="ball3 ball"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+      //   const tween = gsap.to(
+      //     ".ball3",
+      //     { duration: 10, rotation: 720, x: 500 },
+      //     0
+      //   );
+      //   tween.pause(1); //jump & pause at a particular location which is here 1
+      //   tween.timeScale(5);//5 times faster than normal speed
+
+      //   const tl = gsap.timeline();
+      //   tl.to(".ball1", { rotation: 720, x: 500, duration: 5 }, 0)
+      //     .to(".ball2", { rotation: -720, x: 500 }, "<2")
+      //     .to(".ball3", { rotation: 720, x: 500 });
+
+      //   tl.reverse(5);
+      //   tl.seek(2); //Jump to 2 seconds in
+      //   tl.progress(0.2); //will start the animiation at mention point
+      //   tl.addLabel("step2", 17)
+      //     .to(".ball1", { duration: 4, rotation: 720, x: 500 })
+      //     .to(".ball3", { rotation: 720, x: 500 }, 1)
+      //     .to(".ball2", { rotation: -720, x: 500 }, "step2");
+
+      //   tl.seek("step2");
+
+      //   const tl = gsap.timeline({ defaults: { duration: 2 } });
+      //   tl.to(".ball1", { rotation: 720, x: 500 }, "<4")
+      //     .to(".ball2", { rotation: 720, x: 500 }, 2)
+      //     .to(".ball3", { rotation: 720, x: 500 });
+
+      gsap.to(".ball1", { duration: 1, rotation: 720, x: 500 }, 1);
+      gsap.to(".ball2", { duration: 1, rotation: -720, x: 500 }, 3);
+      gsap.to(".ball3", { duration: 1, rotation: 720, x: 500 }, 2);
+    </script>
+  </body>
+</html>
